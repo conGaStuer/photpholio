@@ -1,0 +1,113 @@
+section {
+  color: #c5c9e0;
+
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -100px;
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    width: 80%;
+    text-align: center;
+    line-height: 55px;
+
+    background: linear-gradient(to right, #c5c9e0 50%, rgb(37, 37, 37) 50%);
+    background-size: 200% 100%;
+    background-position-x: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  .seeyah {
+    margin-bottom: 60px;
+    span {
+      position: relative;
+      display: inline-block;
+      background: linear-gradient(
+        to right,
+        rgb(80, 3, 131) 50%,
+        rgb(30, 29, 29) 50%
+      );
+      background-size: 200% 100%;
+      background-position-x: 100%;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      &::after {
+        content: "";
+        position: absolute;
+        width: 250px;
+        top: 65%;
+        left: 65%;
+        border-radius: 10px;
+        z-index: -1;
+        // Fake border bằng background gradient animate
+        background: linear-gradient(
+          90deg,
+          rgba(228, 5, 5, 0.5),
+          rgba(255, 255, 24, 0.5),
+          rgba(16, 152, 82, 0.5),
+          rgba(26, 34, 198, 0.5),
+          rgb(198, 16, 174)
+        );
+        background-size: 300% 300%;
+        animation: moveBorder 10s linear infinite;
+
+        // Chỉ hiện viền trái + dưới bằng mask
+        mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+        -webkit-mask: linear-gradient(#000 0 0) content-box,
+          linear-gradient(#000 0 0);
+
+        mask-composite: exclude; /* Firefox */
+        -webkit-mask-composite: destination-out; /* Chrome */
+
+        padding: 10px;
+        box-sizing: border-box;
+      }
+    }
+
+    // 🔁 Animation
+    @keyframes moveBorder {
+      0% {
+        background-position: 0% 50%;
+      }
+      100% {
+        background-position: 100% 50%;
+      }
+    }
+  }
+  .span {
+    width: 40px;
+    height: 40px; /* thêm height = width để thành hình tròn */
+    font-size: 25px; /* font nhỏ để text gần như ẩn */
+    border-radius: 20px;
+    background: rgba(40, 44, 60, 0.35);
+    margin-bottom: 40px;
+    overflow: hidden; /* tránh text tràn ra ngoài */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  h3 {
+    width: 60%;
+    color: #8d8da9;
+    font-size: 30px;
+    text-align: justify;
+    background: linear-gradient(
+      to right,
+      rgb(228, 223, 232) 50%,
+      rgb(30, 29, 29) 50%
+    );
+    background-size: 200% 100%;
+    background-position-x: 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}

@@ -1,0 +1,23 @@
+.change-bg {
+  width: 100%;
+  height: 200vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: aqua;
+  overflow: hidden;
+  position: relative;
+  .circle-change {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: aliceblue;
+    border-radius: 50%;
+  }
+  .c-left {
+    left: -80%;
+  }
+  .c-right {
+    right: -80%;
+  }
+}

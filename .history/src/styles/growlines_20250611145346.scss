@@ -1,0 +1,16 @@
+.center {
+  width: 300px;
+  height: 450px;
+  background: url("../styles/retro1.jpg") no-repeat center;
+  background-size: 50% auto; /* Ban đầu hiển thị một phần nhỏ */
+  background-attachment: fixed; /* Tạo hiệu ứng parallax */
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  left: 38%;
+  transition: background-size 0.3s ease; /* Hiệu ứng mượt khi thay đổi kích thước */
+}
+
+.center.expanded {
+  background-size: 120% auto; /* Mở rộng mà không thay đổi hình dạng */
+}

@@ -1,0 +1,16 @@
+.circle {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+  z-index: 2;
+  top: -400px;
+  left: 450px;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  perspective: 800px;
+  backface-visibility: hidden;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3); // giúp nhìn "nổi khối"
+  border-radius: 10px;
+}

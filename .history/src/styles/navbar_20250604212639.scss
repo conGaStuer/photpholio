@@ -1,0 +1,58 @@
+nav {
+  width: 52%;
+  height: 100%;
+  background-color: aliceblue;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 40px;
+}
+
+.btn {
+  width: 23%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+button {
+  position: relative;
+  width: 180px;
+  height: 85%;
+  border-radius: 30px;
+  background: linear-gradient(90deg, #e0e0e0 0%, #e1f0fe 50%, #e0e0e0 100%);
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+button .text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+button .original {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+
+button .hover-text {
+  top: -100%;
+  opacity: 0;
+}
+
+button:hover .original {
+  top: 100%;
+  opacity: 0;
+}
+
+button:hover .hover-text {
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}

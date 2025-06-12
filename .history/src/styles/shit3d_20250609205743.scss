@@ -1,0 +1,15 @@
+.circle {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+  z-index: 2;
+  top: -400px;
+  left: 450px;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  transition: transform 1s;
+  perspective: 1000px;
+  backface-visibility: hidden;
+}

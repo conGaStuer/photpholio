@@ -1,0 +1,16 @@
+.intro-text {
+  width: 80%;
+  height: 150px;
+  background-color: rgb(106, 157, 202);
+  margin: 0 auto;
+  position: relative;
+  top: -400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  span {
+    width: 250px;
+    color: #c5c9e0;
+    font-size: 22px;
+  }
+}

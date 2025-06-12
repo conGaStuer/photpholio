@@ -1,0 +1,32 @@
+.slide {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  top: 0px;
+  .slider {
+    display: flex;
+    overflow: hidden;
+    width: 100vw; /* Hoặc chiều rộng muốn hiển thị */
+  }
+  h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 350px;
+    font-weight: 1000;
+    color: #c5c9e0;
+    position: relative;
+    top: 30px;
+    white-space: nowrap; /* để chữ không xuống dòng */
+    margin-right: 20px;
+    animation: slide-left 20s linear infinite;
+  }
+  @keyframes slide-left {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-250px * 7));
+    }
+  }
+}
