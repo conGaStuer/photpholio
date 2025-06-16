@@ -4,8 +4,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplineViewer from "./SplineViewer";
-import img3d from "../styles/3d2.jpg";
-
 export default function Shit3D() {
   gsap.registerPlugin(useGSAP);
   gsap.registerPlugin(ScrollTrigger); // <-- Cái này là bắt buộc
@@ -13,6 +11,14 @@ export default function Shit3D() {
   const container = useRef();
 
   useGSAP(() => {
+    useEffect(() => {
+      gsap.from(container.current, {
+        x: 1250,
+        opacity: 1,
+        duration: 3,
+        ease: "expo.out",
+      });
+    }, []);
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".circle",
@@ -45,7 +51,12 @@ export default function Shit3D() {
   });
   return (
     <>
-      <img src={img3d} alt="circle" ref={container} className="circle" />
+      <img
+        src={require("../styles/3d2.jpg")}
+        alt="circle"
+        ref={container}
+        className="circle"
+      />
 
       <div className="after-trigger" style={{ height: "100px" }}></div>
     </>

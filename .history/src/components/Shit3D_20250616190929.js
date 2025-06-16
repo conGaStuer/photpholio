@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplineViewer from "./SplineViewer";
-import img3d from "../styles/3d2.jpg";
+import img3d from "../assets/3d2.jpg";
 
 export default function Shit3D() {
   gsap.registerPlugin(useGSAP);
