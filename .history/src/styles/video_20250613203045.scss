@@ -1,0 +1,43 @@
+h1 {
+  font-size: 90px;
+  color: #dbe3fb;
+  font-weight: 1000;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 0;
+  line-height: 80px;
+  text-transform: uppercase;
+  letter-spacing: -5px;
+  position: relative;
+
+  .span {
+    font-size: 100px;
+    position: relative;
+    top: -20px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; // Smooth scaling transition
+
+    &:hover {
+      transform: scale(2); // Scale up the span on hover
+    }
+  }
+}
+
+.hover-image {
+  position: relative;
+  text-align: center; // Center the image
+}
+
+img.left {
+  position: absolute;
+  top: 200px; // Display below text
+  left: 50%;
+  transform: translateX(-50%); // Center horizontally
+  width: 0%; // Initial width (hidden)
+  height: auto;
+  opacity: 0; // Initial opacity (hidden)
+  display: block; // Remove extra spacing
+  transition: opacity 0.3s ease-in-out; // Smooth opacity transition (optional, as GSAP handles this)
+}

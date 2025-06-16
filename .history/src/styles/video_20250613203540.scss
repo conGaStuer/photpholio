@@ -1,0 +1,48 @@
+.video-side {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  top: -900px; /* Comment để kiểm tra, nếu cần hiệu ứng cuộn thì giữ lại */
+
+  h1 {
+    font-size: 90px;
+    color: #dbe3fb;
+    font-weight: 1000;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    line-height: 80px;
+    text-transform: uppercase;
+    letter-spacing: -5px;
+    position: relative;
+
+    span {
+      font-size: 100px;
+      position: relative;
+      top: -20px;
+      margin-right: 20px;
+      cursor: pointer; /* Chỉ ra có tương tác */
+      background: #c5c9e0;
+      background-size: 200% 100%;
+      background-position-x: 100%;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+  }
+
+  img {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    opacity: 0;
+    visibily: hidden;
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+  }
+}

@@ -1,0 +1,89 @@
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+
+body {
+  font-family: "Satoshi", sans-serif;
+  background: #050917;
+  color: #c5c9e0;
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  padding: 60px 40px 20px;
+  background: transparent;
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: 100px;
+    background: transparent;
+    padding: 60px;
+    flex-wrap: wrap;
+  }
+
+  .footer-left {
+    flex: 1;
+    min-width: 200px;
+
+    .circle-logo {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: transparent;
+      border: 2px solid #c5c9e030;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .inner-logo {
+        font-size: 32px;
+        font-weight: bold;
+      }
+
+      .circle-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        font-size: 10px;
+        color: #c5c9e0;
+        text-align: center;
+      }
+    }
+  }
+
+  .footer-links {
+    flex: 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 30px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      p {
+        margin: 0;
+        font-size: 14px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 13px;
+    color: #999;
+    background: linear-gradient(90deg, #2e2e4f 0%, #050917 50%, #2e2e4f 100%);
+    padding-top: 20px;
+  }
+}

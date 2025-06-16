@@ -1,0 +1,47 @@
+.video-side {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  top: -900px; /* Comment để kiểm tra, nếu cần hiệu ứng cuộn thì giữ lại */
+
+  h1 {
+    font-size: 90px;
+    color: #dbe3fb;
+    font-weight: 1000;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+    line-height: 80px;
+    text-transform: uppercase;
+    letter-spacing: -5px;
+    position: relative;
+
+    span {
+      font-size: 100px;
+      position: relative;
+      top: -20px;
+      margin-right: 20px;
+      cursor: pointer; /* Chỉ ra có tương tác */
+    }
+  }
+
+  .hover-image {
+    position: absolute;
+    top: 10%; /* Hiển thị dưới text */
+    left: 50%;
+    transform: translateX(-50%); /* Canh giữa */
+    width: 200px;
+    height: auto;
+    z-index: 10;
+    opacity: 0; /* Ban đầu ẩn */
+    background: #fff; /* Nền trắng để dễ thấy */
+    padding: 5px; /* Khoảng cách quanh ảnh */
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block; /* Loại bỏ khoảng cách dư thừa */
+    }
+  }
+}
