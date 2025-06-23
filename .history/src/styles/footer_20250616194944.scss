@@ -1,0 +1,40 @@
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+
+body {
+  margin: 0;
+  background: #050917;
+  font-family: "Satoshi", sans-serif;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: relative;
+  background: #050917;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.contact-text {
+  font-size: 180px;
+  font-weight: bold;
+  background: linear-gradient(160deg, #dbe1fc 49.9%, #050917 50.1%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+}
+
+.email-text {
+  color: #c5c9e0;
+  font-size: 28px;
+  font-weight: 500;
+}

@@ -1,0 +1,79 @@
+import React from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef, useEffect } from "react";
+import "../styles/changebg.scss";
+gsap.registerPlugin(ScrollTrigger);
+
+export default function ChangeBackground() {
+  const container = useRef(null);
+
+  useEffect(() => {
+    gsap.to(".c-left", {
+      width: "+=450",
+      scrollTrigger: {
+        trigger: ".c-left",
+        start: "12% 70%",
+        end: "20% center",
+        scrub: 2,
+      },
+    });
+    gsap.to(".c-right", {
+      width: "+=450",
+      scrollTrigger: {
+        trigger: ".c-right",
+        start: "12% 70%",
+        end: "20% center",
+        scrub: 2,
+      },
+    });
+  }, []);
+  return (
+    <div className="chanaaa">
+      <div className="change-bg">
+        <div className="circle-change c-left" ref={container}></div>
+        <div className="circle-change c-right"></div>
+      </div>
+      <div className="change-bg--text">
+        <h1>Hello! I’m a web developer passionate about creating clean</h1>
+        <h2>and user-friendly websites</h2>
+        <div className="text-parts">
+          <div className="text-part">
+            <span className="aa">01</span>
+            <div className="text-part--intro">
+              <h4>Frontend Devoloper</h4>
+              <span>
+                Hi, I’m an IT student with a strong interest in full-stack
+                development. I love learning new technologies and building
+                useful applications.
+              </span>
+            </div>
+          </div>
+          <div className="text-part">
+            <span className="aa">02</span>
+            <div className="text-part--intro">
+              <h4>Frontend Devoloper</h4>
+              <span>
+                These proofs are then recusively aggregated & verified on
+                leaf-level.
+              </span>
+            </div>
+          </div>
+          <div className="text-part">
+            <span className="aa">03</span>
+            <div className="text-part--intro">
+              <h4>Frontend Devoloper</h4>
+              <span>
+                Aggregated proofs are then verified by millions of light node
+                verifiers.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="circle-big">
+        <img className="center" src={require("../styles/e.png")} alt="center" />
+      </div>
+    </div>
+  );
+}

@@ -1,0 +1,65 @@
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+
+:root {
+  --footer-text: #c5c9e0;
+  --footer-blur: 5px;
+  --footer-radius: 200px;
+}
+
+body {
+  font-family: "Satoshi", sans-serif;
+  background: #050917;
+  color: var(--footer-text);
+  font-weight: 400;
+  margin: 0;
+}
+.footer {
+  margin: 0 auto;
+  background: #050917;
+  margin-top: -600px;
+  padding-top: 300px;
+  clip-path: polygon(0 39%, 100% 0%, 100% 100%, 0% 100%);
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 60px 80px;
+  background: #050917;
+
+  background: var(--footer-bg);
+  backdrop-filter: blur(var(--footer-blur));
+}
+
+.footer-logo {
+  flex: 1 1 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  img {
+    width: 120px;
+    height: auto;
+  }
+}
+
+.footer-links {
+  p {
+    color: var(--footer-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: #c5c9e0;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  padding: 60px 20px 10px;
+  font-size: 14px;
+  color: #888;
+}

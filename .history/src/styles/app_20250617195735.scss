@@ -1,0 +1,37 @@
+@import url("https://fonts.cdnfonts.com/css/satoshi");
+body {
+  font-family: "Satoshi", sans-serif;
+}
+body {
+  background: #050917;
+  color: #c5c9e0;
+  font-weight: 400;
+  overflow-y: scroll; // ⚠️ KHÔNG dùng `hidden`
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+.left {
+  position: absolute;
+  left: 15%;
+  top: -25%;
+}
+.glow-background {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(78, 100, 255, 0.3), transparent 70%);
+  transform: translate(-50%, -50%);
+  opacity: 0.2;
+  filter: blur(80px);
+  z-index: 0;
+}
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
